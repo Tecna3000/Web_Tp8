@@ -1,0 +1,95 @@
+{{> header}}
+
+
+
+<div class="container" >
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
+    <div class="col ">
+      <h1>{{title}}</h1>
+ 
+      <p>{{description}}</p>
+  
+      <p>Durée : {{duration}}</p>
+    </div> 
+   <div class="col">
+      <img src="{{img}}" class=" img-fluid"  alt="...">
+    </div>
+  </div>
+
+  <div class="row-cols">
+
+    <div class="col">
+      <div>
+        <div>
+        Ingrédients :
+        <ul>
+          {{#ingredients}}
+            <li>{{name}}</li>
+          {{/ingredients}}
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row-cols">
+    <div class="col">
+      <div>
+        <div>
+        Étapes :
+        <ol>
+          {{#stages}}
+            <li>{{description}}</li>
+          {{/stages}}
+        </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p>
+      <a class="btn btn-outline-success" href="/update/{{id}}">Modifier</a>
+      <a class="btn btn-outline-success" href="/delete/{{id}}">Supprimer</a>
+    </p>
+  </div>
+</div>
+
+
+
+
+  <!-- <div>
+    <div>
+    <h1>{{title}}</h1>
+    <p>
+    <a href="/update/{{id}}">Modifier</a>
+    <a href="/delete/{{id}}">Supprimer</a>
+    </p>
+
+    <p>{{description}}</p>
+    <p>Durée : {{duration}}</p>
+    </div>
+    <div>
+    <img src="{{img}}">
+    </div>
+  </div>
+  <div>
+    <div>
+    Ingrédients :
+    <ul>
+      {{#ingredients}}
+        <li>{{name}}</li>
+      {{/ingredients}}
+    </ul>
+    </div>
+  </div>
+  <div>
+    <div>
+    Étapes :
+    <ol>
+      {{#stages}}
+        <li>{{description}}</li>
+      {{/stages}}
+    </ol>
+    </div>
+  </div> -->
+{{> footer}}
